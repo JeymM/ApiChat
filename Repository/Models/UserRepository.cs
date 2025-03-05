@@ -11,6 +11,7 @@ namespace Chat.Repository.Models
             string sql = "INSERT INTO Users(Fullname,Email,Password) VALUES(@Fullname,@Email,@Password)";
             using(var connection =new SqlConnection("Data Source=PCJEYM\\SQLEXPRESS;Initial Catalog=CHATWEB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False"))
             {
+               
                 connection.Open();
                 UserDatabaseModel userDatabaseModel = new UserDatabaseModel
                 {
